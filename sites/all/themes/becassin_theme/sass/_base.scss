@@ -9,6 +9,7 @@
 //
 a {
   color: $link_color;
+  text-decoration: none;
   &:link {
   }
   &:visited {
@@ -23,7 +24,7 @@ a {
   }
   &:hover, &:active {
     color: $active_link_color;
-    text-decoration: underline;
+    //text-decoration: underline;
     outline: 0; // Improve readability when focused and hovered in all browsers: h5bp.com/h
   }
 }

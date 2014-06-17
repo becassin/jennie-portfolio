@@ -32,6 +32,27 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
       useWindowWidth: true // Use the width of the window instead of the width of the screen
     });
   }
+  function displayProjects(){
+    var page = $('div.page-projects');
+    var _interval = 600;
+    if(page.length){
+      var items = page.find('div.view-content .views-row').get().sort(function() { return 0.5 - Math.random() });
+      var count = 0;
+      var tid = setInterval(function(){
+        var item = items.pop();
+        $(item).animate({ opacity: 1 });;
+        count ++;
+        if(!items.length){
+          clearInterval(tid);
+        }
+      }, _interval);
+    }
+  }
+
+  $( window ).load(function() {
+    displayProjects();
+  });
+  
   Drupal.behaviors.mobileMenu = {
     attach: function (context) {
       createMobileMenu();

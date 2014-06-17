@@ -1,10 +1,15 @@
 <div id="page" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <!-- ______________________ HEADER _______________________ -->
   <header id="header">
-    <?php if ($logo): ?>
+    <?php if ($logo && false): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
       </a>
+    <?php endif; ?>
+    <?php if ($page['header']): ?>
+      <div id="header-region">
+        <?php print render($page['header']); ?>
+      </div>
     <?php endif; ?>
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan">
@@ -24,23 +29,7 @@
         <?php endif; ?>
       </div>
     <?php endif; ?>
-    <?php if ($page['header']): ?>
-      <div id="header-region">
-        <?php print render($page['header']); ?>
-      </div>
-    <?php endif; ?>
   </header> <!-- /header -->
-   <?php if ($main_menu || $secondary_menu || $page['navbar']): ?>
-      <nav id="navigation" class="menu <?php !empty($main_menu) ? print "with-primary" : ''; !empty($secondary_menu) ? print " with-secondary" : ''; ?>">
-        <?php print theme('links', array('links' => $main_menu, 'attributes' => array('id' => 'primary', 'class' => array('links', 'clearfix', 'main-menu')))); ?>
-        <?php print theme('links', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary', 'class' => array('links', 'clearfix', 'sub-menu')))); ?>
-        <?php if ($page['navbar']): ?>
-          <div id="navbar" class="clear">
-            <?php print render($page['navbar']); ?>
-          </div>
-        <?php endif; ?>
-      </nav>
-    <?php endif; ?>
   <div id="main" class="clearfix" role="main">
     <div id="content">
       <div id="content-inner" class="inner column center">
@@ -49,8 +38,7 @@
         <?php endif; ?>
         <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
           <div id="content-header">
-            <?php print $breadcrumb; ?>
-            <?php if ($title): ?>
+            <?php if ($title && false): ?>
               <h1 class="title"><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print $messages; ?>

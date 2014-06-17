@@ -21,11 +21,45 @@
 #sidebar-second,
 #content_top,
 #content_bottom {
-  border:$border;
+  //border:$border;
 }
 
 #header {
   background: $header_bg;
+  height: 150px;
+  #name-and-slogan{
+    display: inline-block;
+    float: right;
+  }
+  #header-region{
+    display: inline-block;
+    ul, li{
+      display: inline-block;
+      position: relative;
+      text-transform: lowercase;
+    }
+    li{
+      border-left: solid 1px;
+      padding-left: 10px;
+      width:160px;
+      &.active-trail{
+        font-weight: bold;
+      }
+      li{
+        border-left: none;
+        font-weight: normal;
+        &.active-trail{
+          font-weight: bold;
+        }
+      }
+      ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+      }
+    }
+  }
 }
 
 #sidebar-first {
@@ -48,6 +82,7 @@
 .overlay-modal-background{
   background: white;
 }
+
 html.js body.is_overlayed{
   background: white !important;
   #header, #navigation{
@@ -57,5 +92,12 @@ html.js body.is_overlayed{
     #content #content-header, .node-inner header{
       display: none
     }
+  }
+}
+
+.page-projects{
+  .views-row{
+    opacity: 0;
+    display: inline-block;
   }
 }
