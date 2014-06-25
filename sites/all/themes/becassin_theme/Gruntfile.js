@@ -37,14 +37,12 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            options: {
-                livereload: true,
-            },
             scripts: {
                 files: ['js/*.js'],
                 tasks: ['concat:dist', 'uglify'],
                 options: {
                     spawn: false,
+                    livereload: 35729,
                 }
             },
             css: {
@@ -52,7 +50,8 @@ module.exports = function(grunt) {
                 tasks: ['compass:dev'],
                 options: {
                     spawn: false,
-                }
+                    livereload: 35729,
+                },
             },
             images: {
                 files: ['images/**/*.{png,jpg,gif}'],

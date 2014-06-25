@@ -99,5 +99,27 @@ html.js body.is_overlayed{
   .views-row{
     opacity: 0;
     display: inline-block;
+    float: left;
+  }
+  .project_case{
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  $size_pad : 100px;
+  $margin_pad : 30px;
+  @for $i from 1 through 4 {
+    .project_size_#{$i} {
+      width: $size_pad * $i;
+      height: $size_pad * $i;
+    }
+    .project_marginleft_#{$i} {
+      margin-left: $margin_pad * $i;
+    }
+    .project_margintop_#{$i} {
+      margin-top: $margin_pad * $i;
+    }
   }
 }
