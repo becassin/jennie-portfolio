@@ -93,6 +93,26 @@ html.js body.is_overlayed{
       display: none
     }
   }
+
+   #page{
+    width: $overlay_page_width;
+    text-align: center;
+    .field-slideshow{
+      margin: 0 auto !important;
+      .field-slideshow-slide{
+        width: 100% !important;
+        vertical-align: middle;
+        line-height: $overlay_slider_height;
+      }
+    }
+    .field-slideshow-pager a{
+      color: transparent;
+      &:after{
+        content: "○";
+        color: black;
+      }
+    }
+   }
 }
 
 .page-projects{
@@ -102,7 +122,6 @@ html.js body.is_overlayed{
     float: left;
   }
   .project_case{
-    overflow: hidden;
     img{
       width: 100%;
       height: 100%;
@@ -110,7 +129,7 @@ html.js body.is_overlayed{
   }
   $size_pad : 100px;
   $margin_pad : 30px;
-  @for $i from 1 through 4 {
+  @for $i from 0 through 4 {
     .project_size_#{$i} {
       width: $size_pad * $i;
       height: $size_pad * $i;
