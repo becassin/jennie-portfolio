@@ -23,7 +23,7 @@
   }
   function displayProjects(){
     var page = $('div.page-projects');
-    var _interval = 600;
+    var _interval = 200;
     if(page.length){
       var items = page.find('div.view-content .views-row').get().sort(function() { return 0.5 - Math.random() });
       var count = 0;
