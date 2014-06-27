@@ -968,6 +968,16 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   margin-top: 120px;
 }
 
+/* CONTACT */
+.page-node-9 #content article .content .field-item img {
+  float: left;
+  margin-right: 30px;
+  margin-left: 375px;
+}
+.page-node-9 #content article .content .field-item div {
+  padding-top: 20px;
+}
+
 @media print {
   * {
     background: transparent !important;
