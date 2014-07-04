@@ -1,0 +1,28 @@
+<?php 
+/**
+ * Check if we are in a overlay
+ */
+function becassin_module_is_overlayed() {
+  $is_overlayed = FALSE;
+  // Skip if overlay does not exist
+  if (!module_exists('overlay')) {
+    return $is_overlayed;
+  }
+  // Check the proper way
+  if (overlay_get_mode() == 'child') {
+    $is_overlayed = TRUE;
+  }
+  // Sometimes the proper way fails, so we check the query string as a fallback
+  if (!$is_overlayed) {
+    $is_overlayed = (bool)(preg_match( '/render=overlay$/', $_SERVER['QUERY_STRING']));
+  }
+  // Also check if we are dealing with overlay-ajax request
+  if (!$is_overlayed) {
+    $path = request_uri();
+    if (strpos($path, '/overlay-ajax') === 0) {
+      $is_overlayed = TRUE;
+    }
+  }
+  return $is_overlayed;
+}
+?>
