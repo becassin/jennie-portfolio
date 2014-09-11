@@ -52,7 +52,6 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
   $( window ).load(function() {
     displayProjects();
     var gallery = $('.node-project .slider');
-    gallery.hide();
     var sliders_html = gallery.find('.slider_inner').html();
     var gallery_triggers = $('.node-project .content .field-items .field-item');
     gallery_triggers.click(function(){

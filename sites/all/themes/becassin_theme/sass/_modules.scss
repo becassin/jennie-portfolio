@@ -148,7 +148,13 @@ html.js body.is_overlayed{
   header{
     display: none;
   }
+  .content{
+    .field-item{
+      cursor: pointer;
+    }
+  }
   .slider{
+    display: none;
     $slider_width: 550px;
     position: fixed;
     width: 100%;

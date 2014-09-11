@@ -921,7 +921,11 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 .node-project header {
   display: none;
 }
+.node-project .content .field-item {
+  cursor: pointer;
+}
 .node-project .slider {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
