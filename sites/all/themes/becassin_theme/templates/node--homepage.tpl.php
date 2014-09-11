@@ -24,7 +24,7 @@
       <a href="/node/<?php echo $target_id ?>">
       <?php
           $hero_image = array(
-            'style_name' => 'medium',
+            'style_name' => 'homepage__180x180_',
             'path' => $file_uri,
             'width' => '',
             'height' => '',
