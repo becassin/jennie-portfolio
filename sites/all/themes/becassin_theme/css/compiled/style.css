@@ -953,6 +953,10 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides .field-item img {
   vertical-align: middle;
+  max-width: 550px;
+  max-height: 550px;
+  width: auto;
+  height: auto;
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides_nav {
   position: absolute;

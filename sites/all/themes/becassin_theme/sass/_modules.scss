@@ -178,6 +178,10 @@ html.js body.is_overlayed{
             vertical-align: middle;
             img{
               vertical-align: middle;
+              max-width: $slider_width;
+              max-height: $slider_width;
+              width: auto;
+              height: auto;
             }
           }
         }
