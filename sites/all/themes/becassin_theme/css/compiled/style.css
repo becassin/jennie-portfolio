@@ -921,10 +921,10 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 .node-project header {
   display: none;
 }
-.node-project .content .field-item {
+.node-project .overview_content .field-item {
   cursor: pointer;
 }
-.node-project .content .field-item img {
+.node-project .overview_content .field-item img {
   width: auto;
   height: auto;
   margin-right: 20px;
