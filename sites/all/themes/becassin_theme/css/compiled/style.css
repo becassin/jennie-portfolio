@@ -975,6 +975,8 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides_tabs li a {
   color: transparent;
+  min-width: 20px;
+  display: block;
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides_tabs li a:after {
   content: "•";

@@ -198,6 +198,8 @@ html.js body.is_overlayed{
             display: inline-block;
             a{
               color: transparent;
+              min-width: 20px;
+              display: block;
               &:after{
                 content: "•";
                 color: black;
