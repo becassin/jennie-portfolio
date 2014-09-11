@@ -11,7 +11,7 @@
         <span class="submitted"><?php print $date; ?> — <?php print $name; ?></span>
       <?php endif; ?>
     </header>
-    <div class="content">
+    <div class="content overview_content">
       <?php 
         // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
