@@ -977,9 +977,12 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   color: transparent;
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides_tabs li a:after {
-  content: "o";
+  content: "•";
   color: black;
   display: block;
+}
+.node-project .slider .slider_inner .field-name-field-images .rslides_tabs li.rslides_here a:after {
+  content: "o";
 }
 .node-project .slider .slider_inner .button_container {
   position: absolute;
