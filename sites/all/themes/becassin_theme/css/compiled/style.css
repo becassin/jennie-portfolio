@@ -939,6 +939,7 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   top: 0;
   left: 0;
   background-color: white;
+  z-index: 3;
 }
 .node-project .slider .slider_inner {
   position: relative;

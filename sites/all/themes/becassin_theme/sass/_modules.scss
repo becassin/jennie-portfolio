@@ -171,6 +171,7 @@ html.js body.is_overlayed{
     top: 0;
     left: 0;
     background-color: white;
+    z-index: 3;
     .slider_inner{
       position: relative;
       margin-top: 50px;
