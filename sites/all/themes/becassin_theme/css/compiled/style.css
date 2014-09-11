@@ -924,6 +924,15 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 .node-project .content .field-item {
   cursor: pointer;
 }
+.node-project .content .field-item img {
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+}
 .node-project .slider {
   display: none;
   position: fixed;
