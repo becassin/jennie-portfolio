@@ -40,6 +40,29 @@
 
   $( window ).load(function() {
     displayProjects();
+    var gallery = $('.node-project .slider');
+    gallery.hide();
+    var sliders_html = gallery.find('.slider_inner').html();
+    var gallery_triggers = $('.node-project .content .field-items .field-item');
+    gallery_triggers.click(function(){
+      if(!gallery.is(":visible")){
+        var startnr = $(this).index();
+        gallery.fadeIn();
+        $('body').css('overflow','hidden');
+        gallery.find('.field-items').responsiveSlides({
+          auto: false,
+          startidx: startnr, 
+          nav: true,
+          pager: true
+        });
+        gallery.find('.close_button').addClass('jambon').click(function(){
+          gallery.find('.slider_inner').html(sliders_html);
+          gallery.hide();
+          $('body').css('overflow','auto');
+        });
+      }
+    });
+    gallery_triggers.first().trigger("click");
   });
   
   Drupal.behaviors.mobileMenu = {

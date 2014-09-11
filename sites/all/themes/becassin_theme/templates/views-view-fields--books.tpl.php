@@ -24,7 +24,7 @@
  * @ingroup views_templates
  */
 ?>
-<div class="project_case project_size_<?php echo($row->field_field_size[0]['raw']['value']) ?> project_marginleft_<?php echo($row->field_field_margin_left[0]['raw']['value']) ?> project_margintop_<?php echo($row->field_field_margin_top[0]['raw']['value']) ?>">
+<div class="project_case">
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>

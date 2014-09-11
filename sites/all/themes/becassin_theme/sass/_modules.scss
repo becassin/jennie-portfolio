@@ -127,21 +127,99 @@ html.js body.is_overlayed{
       height: 100%;
     }
   }
-  $size_pad : 100px;
-  $margin_pad : 30px;
-  @for $i from 0 through 4 {
-    .project_size_#{$i} {
-      width: $size_pad * $i;
-      height: $size_pad * $i;
-    }
-    .project_marginleft_#{$i} {
-      margin-left: $margin_pad * $i;
-    }
-    .project_margintop_#{$i} {
-      margin-top: $margin_pad * $i;
+  // $size_pad : 100px;
+  // $margin_pad : 30px;
+  // @for $i from 0 through 4 {
+  //   .project_size_#{$i} {
+  //     width: $size_pad * $i;
+  //     height: $size_pad * $i;
+  //   }
+  //   .project_marginleft_#{$i} {
+  //     margin-left: $margin_pad * $i;
+  //   }
+  //   .project_margintop_#{$i} {
+  //     margin-top: $margin_pad * $i;
+  //   }
+  // }
+}
+
+ // PROJECT PAGE 
+ .node-project{
+  header{
+    display: none;
+  }
+  .slider{
+    $slider_width: 550px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    .slider_inner{
+      position: relative;
+      .field-name-field-images{
+        margin: 0 auto; 
+        width: $slider_width;
+        position: relative;
+        .rslides{
+          width: $slider_width;
+          height: $slider_width;
+          .field-item{
+            width: 100%;
+            text-align: center;
+            line-height: $slider_width;
+            vertical-align: middle;
+            img{
+              vertical-align: middle;
+            }
+          }
+        }
+        .rslides_nav{
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          width: 50%;
+          height: 100%;
+          opacity: 0.3;
+          color: transparent;
+          &.next{
+            left: auto;
+            right: 0;
+          }
+        }
+        .rslides_tabs{
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          padding: 0;
+          li{
+            display: inline-block;
+            a{
+              color: transparent;
+              &:after{
+                content: "o";
+                color: black;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .button_container{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        .close_button{
+          border: none;
+          background: transparent;
+          margin-left: $slider_width / 2;
+        }
+      }
     }
   }
-}
+ }
 
 /* CONTACT */
 .page-node-9{
