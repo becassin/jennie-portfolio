@@ -1024,6 +1024,10 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   padding-top: 20px;
 }
 
+.node-type-homepage #content header {
+  display: none;
+}
+
 @media print {
   * {
     background: transparent !important;
