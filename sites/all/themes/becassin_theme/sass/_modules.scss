@@ -268,19 +268,20 @@ html.js body.is_overlayed{
 
 // HOMEPAGE
 .node-type-homepage{
+  $home_thumb_width: 180px;
   #content{
     width: 1000px;
     header{
       display: none;
     }
     .homepage_thumb{
-      width: 180px;
-      height: 180px;
+      width: $home_thumb_width;
+      height: $home_thumb_width;
       float: left;
       margin-right: 20px;
       margin-bottom: 20px;
       text-align: center;
-      line-height: 180px;
+      line-height: $home_thumb_width;
       vertical-align: center;
       img{
         vertical-align: center;
