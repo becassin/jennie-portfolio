@@ -62,7 +62,6 @@
         });
       }
     });
-    gallery_triggers.first().trigger("click");
   });
   
   Drupal.behaviors.mobileMenu = {

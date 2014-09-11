@@ -73,7 +73,6 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
         });
       }
     });
-    gallery_triggers.first().trigger("click");
   });
   
   Drupal.behaviors.mobileMenu = {
