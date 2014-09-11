@@ -23,7 +23,7 @@
       <div class="slider_inner">
         <?php print render($content['field_images']); ?>
         <div class="button_container">
-          <button class="close_button" name="button">close</button>
+          <button class="close_button" name="button">[x]</button>
         </div>
       </div>
     </div>
