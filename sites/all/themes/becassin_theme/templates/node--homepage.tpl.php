@@ -21,7 +21,7 @@
           $file_uri = $content['field_thumbs'][$i]['entity']['field_collection_item'][$j]['field_image']['#object']->field_image['und'][0]['uri'];
           $target_id = $content['field_thumbs'][$i]['entity']['field_collection_item'][$j]['field_link']['#object']->field_link['und'][0]['target_id'];
       ?>
-      <a href="/node/<?php echo $target_id ?>">
+      <a class="homepage_thumb" href="/node/<?php echo $target_id ?>">
       <?php
           $hero_image = array(
             'style_name' => 'homepage__180x180_',
