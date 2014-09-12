@@ -254,11 +254,13 @@ html.js body.is_overlayed{
       .content .field-item{
         img{
           float: left;
-          margin-right: 30px;
-          margin-left: 375px;
+          margin-left: 75px;
         }
-        div{
-          padding-top: 20px;
+        .contact_text{
+          display: block;
+          margin-left: 20px;
+          margin-top: 58px;
+          float: left;
         }
       }
     }

@@ -1017,11 +1017,13 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 /* CONTACT */
 .page-node-9 #content article .content .field-item img {
   float: left;
-  margin-right: 30px;
-  margin-left: 375px;
+  margin-left: 75px;
 }
-.page-node-9 #content article .content .field-item div {
-  padding-top: 20px;
+.page-node-9 #content article .content .field-item .contact_text {
+  display: block;
+  margin-left: 20px;
+  margin-top: 58px;
+  float: left;
 }
 
 .node-type-homepage #content {
