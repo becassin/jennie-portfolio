@@ -17,9 +17,10 @@
         hide($content['comments']);
         hide($content['links']);
         for ($i = 0; $i <= sizeof($content['field_thumbs']['#items'])-1; $i++) {
-          $j = $i + 1;
-          $file_uri = $content['field_thumbs'][$i]['entity']['field_collection_item'][$j]['field_image']['#object']->field_image['und'][0]['uri'];
-          $target_id = $content['field_thumbs'][$i]['entity']['field_collection_item'][$j]['field_link']['#object']->field_link['und'][0]['target_id'];
+          $entity = $content['field_thumbs'][$i]['entity']['field_collection_item'];
+          $entity = array_pop($entity);;
+          $file_uri = $entity['field_image']['#object']->field_image['und'][0]['uri'];
+          $target_id = $entity['field_link']['#object']->field_link['und'][0]['target_id'];
       ?>
       <a class="homepage_thumb" href="/node/<?php echo $target_id ?>">
       <?php
