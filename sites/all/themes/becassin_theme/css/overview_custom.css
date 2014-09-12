@@ -104,3 +104,79 @@
   width: 600px;
   margin-top: 100px;
 }
+
+
+
+
+/*GOOD STORE*/
+
+
+.page-node-24 .overview_content .field-item:nth-child(1) img{
+  margin-left: 91px;
+  width: 200px;
+  margin-right: 0px;
+  margin-top: -10px;
+
+}
+.page-node-24 .overview_content .field-item:nth-child(2){
+  z-index:2;
+  position:relative;
+}
+.page-node-24 .overview_content .field-item:nth-child(2) img{
+  margin-left: 680px;
+  width: 300px;
+  margin-top: 0px;
+}
+.page-node-24 .overview_content .field-item:nth-child(3){
+  z-index:1;
+  position:relative;
+}
+.page-node-24 .overview_content .field-item:nth-child(3) img{
+  margin-left: 53px;
+  width: 600px;
+  margin-top: -211px;
+
+}
+.page-node-24 .overview_content .field-item:nth-child(4) img{
+  margin-left: 45px;
+  width: 174px;
+  margin-bottom: 0;
+  margin-top: 55px;
+
+}
+
+
+
+/*work samples*/
+
+
+
+.page-work-samples .view-books .views-row-1 {
+  margin-left: 50px;
+  width: 300px;
+  margin-bottom: 0;
+  margin-right: 0px;
+  margin-top: 0px;
+
+}
+.page-work-samples .view-books .views-row-2 {
+  margin-left: 25px;
+  width: 300px;
+  margin-bottom: 0;
+  margin-top: 11px;
+
+}
+
+
+
+
+/*BOOKS*/
+
+
+.page-node-23 .overview_content .field-item img{
+    margin-left: 30px;
+    width: 500px;
+    margin-right: 500px;
+    margin-bottom: 30;
+
+}  
