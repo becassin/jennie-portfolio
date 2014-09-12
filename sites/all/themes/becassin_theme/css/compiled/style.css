@@ -1025,19 +1025,19 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 }
 
 .node-type-homepage #content {
-  width: 1000px;
+  width: 900px;
 }
 .node-type-homepage #content header {
   display: none;
 }
 .node-type-homepage #content .homepage_thumb {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   text-align: center;
-  line-height: 180px;
+  line-height: 140px;
   vertical-align: center;
 }
 .node-type-homepage #content .homepage_thumb img {
