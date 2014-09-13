@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },
         uglify: {
             options: {
-                sourceMap: true
+                sourceMap: false
             },
             build: {
                 src: 'js/build/production.js',
