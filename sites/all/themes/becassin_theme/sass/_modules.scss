@@ -25,14 +25,11 @@
 }
 
 #header {
-  background: $header_bg;
   height: 150px;
   #name-and-slogan{
     display: inline-block;
-    float: right;
   }
   #header-region{
-    display: inline-block;
     ul, li{
       display: inline-block;
       position: relative;
@@ -42,6 +39,7 @@
       border-left: solid 1px;
       padding-left: 10px;
       width:160px;
+      display: block;
       &.active-trail{
         font-weight: bold;
       }
@@ -269,25 +267,121 @@ html.js body.is_overlayed{
 
 
 // HOMEPAGE
-.node-type-homepage{
-  $home_thumb_width: 140px;
-  #content{
-    width: 900px;
-    header{
-      display: none;
-    }
-    .homepage_thumb{
-      width: $home_thumb_width;
-      height: $home_thumb_width;
-      float: left;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-      line-height: $home_thumb_width;
-      vertical-align: center;
-      img{
+html {
+  height: 100%;
+  .node-type-homepage{
+    $home_thumb_width: 140px;
+    #content{
+      width: 900px;
+      header{
+        display: none;
+      }
+      .homepage_thumb{
+        width: $home_thumb_width;
+        height: $home_thumb_width;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: $home_thumb_width;
         vertical-align: center;
+        img{
+          vertical-align: center;
+        }
+      }
+    }
+
+    &.page-node-26 {
+      background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund1.jpg);
+      background-size: cover;
+      background-repeat: none;
+      #header {
+        height: 150px;
+        text-align: center;
+        margin-top: 277px;
+        font-family: times;
+        font-size: 15px;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        #name-and-slogan{
+          float: none;
+          #site-slogan {
+            display: none;
+          }
+          a {
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            font-size: 40px;
+          }
+        }
+        #header-region {
+          ul {
+            padding: 0;
+            li {
+              border: none;
+              width: auto;
+              display: inline-block;
+              ul {
+                display: none;
+              }
+              a {
+                color: white;
+                text-transform: uppercase;
+                text-shadow: 1px 1px 1px black;
+              }
+            }
+          }
+        }
+      }
+
+      #content {
+        display: none;
       }
     }
   }
+
+
+  .page-all-projects,
+  .node-type-project,
+  .node-type-page {
+    #page {
+      min-width: 1200px;
+      padding-top: 40px;
+      #header {
+        width: 300px;
+        float: left;
+        position: fixed;
+        z-index: 2;
+        margin-bottom: 2em;
+        #name-and-slogan {
+          #site-slogan {
+            display: none;
+          }
+        }
+        
+        #header-region {
+          ul {
+            padding: 0;
+            li {
+              width: auto;
+              ul {
+                position: relative;
+              }
+              a {
+                text-transform: uppercase;
+              }
+            } 
+          }
+        } 
+      }
+      #main {
+        width: 900px;
+        float: left;
+        margin-left: 300px;
+        .overview_content .field-item img {
+          height: 250px;
+        }
+      }
+    }
+  } 
 }

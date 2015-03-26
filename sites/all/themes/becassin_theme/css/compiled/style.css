@@ -206,7 +206,7 @@ a:hover, a:active {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3em;
-  color: black;
+  color: #000;
 }
 @media only screen and (max-width: 0) {
   h1, h2, h3, h4, h5, h6 {
@@ -624,8 +624,8 @@ html {
 }
 
 html, button, input, select, textarea {
-  font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
-  color: #222222;
+  font-family: "Times New Roman", "Helvetica Neue", helvetica, Arial, sans-serif;
+  color: #222;
 }
 
 body {
@@ -634,19 +634,19 @@ body {
   line-height: 19.5px;
   font-size: 1.3rem;
   line-height: 1.95rem;
-  font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
+  font-family: "Times New Roman", "Helvetica Neue", helvetica, Arial, sans-serif;
   letter-spacing: 0.03em;
 }
 
 ::-moz-selection {
   background: #fe57a1;
-  color: white;
+  color: #fff;
   text-shadow: none;
 }
 
 ::selection {
   background: #fe57a1;
-  color: white;
+  color: #fff;
   text-shadow: none;
 }
 
@@ -822,14 +822,9 @@ tr.odd {
 }
 
 #header {
-  background: white;
   height: 150px;
 }
 #header #name-and-slogan {
-  display: inline-block;
-  float: right;
-}
-#header #header-region {
   display: inline-block;
 }
 #header #header-region ul, #header #header-region li {
@@ -841,6 +836,7 @@ tr.odd {
   border-left: solid 1px;
   padding-left: 10px;
   width: 160px;
+  display: block;
 }
 #header #header-region li.active-trail {
   font-weight: bold;
@@ -860,19 +856,19 @@ tr.odd {
 }
 
 #sidebar-first {
-  background: white;
+  background: #fff;
 }
 
 #sidebar-second {
-  background: white;
+  background: #fff;
 }
 
 #navigation {
-  background: white;
+  background: #fff;
 }
 
 #footer {
-  background: white;
+  background: #fff;
 }
 
 .overlay-modal-background {
@@ -1026,13 +1022,16 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   float: left;
 }
 
-.node-type-homepage #content {
+html {
+  height: 100%;
+}
+html .node-type-homepage #content {
   width: 900px;
 }
-.node-type-homepage #content header {
+html .node-type-homepage #content header {
   display: none;
 }
-.node-type-homepage #content .homepage_thumb {
+html .node-type-homepage #content .homepage_thumb {
   width: 140px;
   height: 140px;
   float: left;
@@ -1042,8 +1041,104 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   line-height: 140px;
   vertical-align: center;
 }
-.node-type-homepage #content .homepage_thumb img {
+html .node-type-homepage #content .homepage_thumb img {
   vertical-align: center;
+}
+html .node-type-homepage.page-node-26 {
+  background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund1.jpg);
+  background-size: cover;
+  background-repeat: none;
+}
+html .node-type-homepage.page-node-26 #header {
+  height: 150px;
+  text-align: center;
+  margin-top: 277px;
+  font-family: times;
+  font-size: 15px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+html .node-type-homepage.page-node-26 #header #name-and-slogan {
+  float: none;
+}
+html .node-type-homepage.page-node-26 #header #name-and-slogan #site-slogan {
+  display: none;
+}
+html .node-type-homepage.page-node-26 #header #name-and-slogan a {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-size: 40px;
+}
+html .node-type-homepage.page-node-26 #header #header-region ul {
+  padding: 0;
+}
+html .node-type-homepage.page-node-26 #header #header-region ul li {
+  border: none;
+  width: auto;
+  display: inline-block;
+}
+html .node-type-homepage.page-node-26 #header #header-region ul li ul {
+  display: none;
+}
+html .node-type-homepage.page-node-26 #header #header-region ul li a {
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+}
+html .node-type-homepage.page-node-26 #content {
+  display: none;
+}
+html .page-all-projects #page,
+html .node-type-project #page,
+html .node-type-page #page {
+  min-width: 1200px;
+  padding-top: 40px;
+}
+html .page-all-projects #page #header,
+html .node-type-project #page #header,
+html .node-type-page #page #header {
+  width: 300px;
+  float: left;
+  position: fixed;
+  z-index: 2;
+  margin-bottom: 2em;
+}
+html .page-all-projects #page #header #name-and-slogan #site-slogan,
+html .node-type-project #page #header #name-and-slogan #site-slogan,
+html .node-type-page #page #header #name-and-slogan #site-slogan {
+  display: none;
+}
+html .page-all-projects #page #header #header-region ul,
+html .node-type-project #page #header #header-region ul,
+html .node-type-page #page #header #header-region ul {
+  padding: 0;
+}
+html .page-all-projects #page #header #header-region ul li,
+html .node-type-project #page #header #header-region ul li,
+html .node-type-page #page #header #header-region ul li {
+  width: auto;
+}
+html .page-all-projects #page #header #header-region ul li ul,
+html .node-type-project #page #header #header-region ul li ul,
+html .node-type-page #page #header #header-region ul li ul {
+  position: relative;
+}
+html .page-all-projects #page #header #header-region ul li a,
+html .node-type-project #page #header #header-region ul li a,
+html .node-type-page #page #header #header-region ul li a {
+  text-transform: uppercase;
+}
+html .page-all-projects #page #main,
+html .node-type-project #page #main,
+html .node-type-page #page #main {
+  width: 900px;
+  float: left;
+  margin-left: 300px;
+}
+html .page-all-projects #page #main .overview_content .field-item img,
+html .node-type-project #page #main .overview_content .field-item img,
+html .node-type-page #page #main .overview_content .field-item img {
+  height: 250px;
 }
 
 @media print {

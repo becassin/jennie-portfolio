@@ -6,11 +6,6 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
       </a>
     <?php endif; ?>
-    <?php if ($page['header']): ?>
-      <div id="header-region">
-        <?php print render($page['header']); ?>
-      </div>
-    <?php endif; ?>
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan">
         <?php if ($site_name): ?>
@@ -27,6 +22,11 @@
         <?php if ($site_slogan): ?>
           <div id="site-slogan"><?php print $site_slogan; ?></div>
         <?php endif; ?>
+      </div>
+    <?php endif; ?>
+    <?php if ($page['header']): ?>
+      <div id="header-region">
+        <?php print render($page['header']); ?>
       </div>
     <?php endif; ?>
   </header> <!-- /header -->
