@@ -14,25 +14,26 @@
     <div class="content">
       <?php 
         // We hide the comments and links now so that we can render them later.
-        hide($content['comments']);
-        hide($content['links']);
-        for ($i = 0; $i <= sizeof($content['field_thumbs']['#items'])-1; $i++) {
-          $entity = $content['field_thumbs'][$i]['entity']['field_collection_item'];
-          $entity = array_pop($entity);;
-          $file_uri = $entity['field_image']['#object']->field_image['und'][0]['uri'];
-          $target_id = $entity['field_link']['#object']->field_link['und'][0]['target_id'];
-      ?>
-      <a class="homepage_thumb" href="/node/<?php echo $target_id ?>">
-      <?php
-          $hero_image = array(
-            'style_name' => 'homepage__180x180_',
-            'path' => $file_uri,
-            'width' => '',
-            'height' => '',
-            );
-          print theme('image_style',$hero_image);
+        if ( FALSE ) {
+          hide($content['comments']);
+          hide($content['links']);
+          for ($i = 0; $i <= sizeof($content['field_thumbs']['#items'])-1; $i++) {
+            $entity = $content['field_thumbs'][$i]['entity']['field_collection_item'];
+            $entity = array_pop($entity);;
+            $file_uri = $entity['field_image']['#object']->field_image['und'][0]['uri'];
+            $target_id = $entity['field_link']['#object']->field_link['und'][0]['target_id'];
+        ?>
+        <a class="homepage_thumb" href="/node/<?php echo $target_id ?>">
+        <?php
+            $hero_image = array(
+              'style_name' => 'homepage__180x180_',
+              'path' => $file_uri,
+              'width' => '',
+              'height' => '',
+              );
+            print theme('image_style',$hero_image);
+          }
         }
-
        ?>
        </a>
     </div>

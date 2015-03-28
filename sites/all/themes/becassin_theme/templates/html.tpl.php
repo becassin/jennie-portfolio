@@ -9,6 +9,7 @@
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
     <?php print $scripts; ?>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Neuton:200,300,400">
   </head>
   <body class="<?php print $classes; ?> <?php echo(becassin_module_is_overlayed()) ? "is_overlayed" : "" ?>" <?php print $attributes;?>>
     <!--[if lt IE 7]>

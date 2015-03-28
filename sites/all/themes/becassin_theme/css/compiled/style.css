@@ -484,6 +484,8 @@ audio:not([controls]) {
   margin: 0;
   padding: 0;
   margin-bottom: -10Px;
+  font-family: "Neuton", "Times New Roman", "Helvetica Neue", helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
 #site-slogan {
@@ -1044,48 +1046,75 @@ html .node-type-homepage #content .homepage_thumb {
 html .node-type-homepage #content .homepage_thumb img {
   vertical-align: center;
 }
-html .node-type-homepage.page-node-26 {
-  background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund1.jpg);
+html .node-type-homepage.page-node-26 #page .homepage-gallery {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+html .node-type-homepage.page-node-26 #page .homepage-gallery .slide {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-repeat: none;
+  display: none;
 }
-html .node-type-homepage.page-node-26 #header {
+html .node-type-homepage.page-node-26 #page .homepage-gallery .slide.slide_1 {
+  background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund1.jpg);
+}
+html .node-type-homepage.page-node-26 #page .homepage-gallery .slide.slide_2 {
+  background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund2.jpg);
+}
+html .node-type-homepage.page-node-26 #page .homepage-gallery .slide.slide_3 {
+  background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund3.jpg);
+}
+html .node-type-homepage.page-node-26 #page .homepage-gallery .slide.slide_4 {
+  background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund4.jpg);
+}
+html .node-type-homepage.page-node-26 #page .homepage-gallery .slide.slide_5 {
+  background-image: url(/sites/all/themes/becassin_theme/images/build/hintergrund5.jpg);
+}
+html .node-type-homepage.page-node-26 #page .homepage-gallery .slide.slide_1 {
+  display: block;
+}
+html .node-type-homepage.page-node-26 #page #header {
   height: 150px;
   text-align: center;
   padding-top: 277px;
-  font-family: times;
   font-size: 15px;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
-html .node-type-homepage.page-node-26 #header #name-and-slogan {
+html .node-type-homepage.page-node-26 #page #header #name-and-slogan {
   float: none;
 }
-html .node-type-homepage.page-node-26 #header #name-and-slogan #site-slogan {
+html .node-type-homepage.page-node-26 #page #header #name-and-slogan #site-slogan {
   display: none;
 }
-html .node-type-homepage.page-node-26 #header #name-and-slogan a {
+html .node-type-homepage.page-node-26 #page #header #name-and-slogan a {
   color: white;
   text-shadow: 1px 1px 1px black;
   font-size: 40px;
 }
-html .node-type-homepage.page-node-26 #header #header-region ul {
+html .node-type-homepage.page-node-26 #page #header #header-region ul {
   padding: 0;
 }
-html .node-type-homepage.page-node-26 #header #header-region ul li {
+html .node-type-homepage.page-node-26 #page #header #header-region ul li {
   border: none;
   width: auto;
   display: inline-block;
 }
-html .node-type-homepage.page-node-26 #header #header-region ul li ul {
+html .node-type-homepage.page-node-26 #page #header #header-region ul li ul {
   display: none;
 }
-html .node-type-homepage.page-node-26 #header #header-region ul li a {
+html .node-type-homepage.page-node-26 #page #header #header-region ul li a {
   color: white;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px black;
 }
-html .node-type-homepage.page-node-26 #content {
+html .node-type-homepage.page-node-26 #page #content {
   display: none;
 }
 html .page-all-projects #page,

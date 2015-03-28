@@ -61,6 +61,26 @@
         });
       }
     });
+    // if( $('.js-homepage-gallery').length ) {
+    //   var transition = function() {
+    //     console.log('transition');
+    //     var active_slide = $('.js-homepage-gallery').find('.slide:visible').addClass('zob');
+    //     if (active_slide.next().length) {
+    //       next_slide = active_slide.next();
+    //     } else {
+    //       next_slide = $('.js-homepage-gallery').find('.slide').first();
+    //     }
+        
+    //     next_slide.fadeIn('slow', function(){
+    //       active_slide.hide();
+    //     });
+    //   };
+    //   setInterval(transition, 4000);
+    // }
+    $('.js-homepage-gallery').cycle({
+      fx: 'fade',
+      slideExpr: '.slide'
+    });
   });
   
   Drupal.behaviors.mobileMenu = {
