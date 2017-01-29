@@ -246,6 +246,7 @@ $.fn.cycle.defaults = {
 })(jQuery);
 /* Author: Dan Linn */
 (function($) {
+
   $(window).resize(function(){
     if(!$(".mobileselect").length) {
       createMobileMenu();
@@ -256,6 +257,8 @@ $.fn.cycle.defaults = {
       $('#navigation ul').hide();
       $('.mobileselect').show();
     }
+    resizeProjects();
+    
   });
   function createMobileMenu(){
     $('#navigation ul').mobileSelect({
@@ -283,6 +286,18 @@ $.fn.cycle.defaults = {
       }, _interval);
     }
   }
+  
+  function resizeProjects() {
+    if($('body.page-node.node-type-project').length) {
+      
+      var height = $('body').height();
+      $('.node-project .slider .slider_inner .field-name-field-images .rslides .field-item').css('line-height', height+'px');
+
+    }
+  }
+  
+  $( document ).ready(function() {
+  });
 
   $( window ).load(function() {
     displayProjects();
@@ -291,6 +306,7 @@ $.fn.cycle.defaults = {
     var gallery_triggers = $('.node-project .content .field-items .field-item');
     gallery_triggers.click(function(){
       if(!gallery.is(":visible")){
+        
         var startnr = $(this).index();
         gallery.fadeIn();
         $('body').css('overflow','hidden');
@@ -300,6 +316,7 @@ $.fn.cycle.defaults = {
           nav: true,
           pager: true
         });
+        resizeProjects();
         gallery.find('.close_button').addClass('jambon').click(function(){
           gallery.find('.slider_inner').html(sliders_html);
           gallery.hide();
@@ -307,26 +324,11 @@ $.fn.cycle.defaults = {
         });
       }
     });
-    // if( $('.js-homepage-gallery').length ) {
-    //   var transition = function() {
-    //     console.log('transition');
-    //     var active_slide = $('.js-homepage-gallery').find('.slide:visible').addClass('zob');
-    //     if (active_slide.next().length) {
-    //       next_slide = active_slide.next();
-    //     } else {
-    //       next_slide = $('.js-homepage-gallery').find('.slide').first();
-    //     }
-        
-    //     next_slide.fadeIn('slow', function(){
-    //       active_slide.hide();
-    //     });
-    //   };
-    //   setInterval(transition, 4000);
-    // }
     $('.js-homepage-gallery').cycle({
       fx: 'fade',
       slideExpr: '.slide'
     });
+    
   });
   
   Drupal.behaviors.mobileMenu = {

@@ -170,25 +170,30 @@ html.js body.is_overlayed{
     left: 0;
     background-color: white;
     z-index: 3;
+    
     .slider_inner{
-      position: relative;
-      margin-top: 50px;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      
       .field-name-field-images{
-        margin: 0 auto; 
-        width: $slider_width;
-        position: relative;
+        height: 100%;
+        width: 100%;
+        
         .rslides{
-          width: $slider_width;
-          height: $slider_width;
+          height: 100%;
+          
           .field-item{
             width: 100%;
+            height: 85%;
             text-align: center;
-            line-height: $slider_width;
+            line-height: 651px;
             vertical-align: middle;
+            
             img{
               vertical-align: middle;
-              max-width: $slider_width;
-              max-height: $slider_width;
+              max-height: 100%;
               width: auto;
               height: auto;
             }
@@ -213,6 +218,8 @@ html.js body.is_overlayed{
           text-align: center;
           width: 100%;
           padding: 0;
+          bottom: 0;
+          z-index: 100;
           li{
             display: inline-block;
             a{
@@ -233,8 +240,9 @@ html.js body.is_overlayed{
       }
       .button_container{
         position: absolute;
-        top: 0;
+        top: 12px;
         left: 50%;
+        z-index: 100;
         .close_button{
           border: none;
           background: transparent;

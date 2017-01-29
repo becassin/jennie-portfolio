@@ -940,28 +940,28 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   z-index: 3;
 }
 .node-project .slider .slider_inner {
-  position: relative;
-  margin-top: 50px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 .node-project .slider .slider_inner .field-name-field-images {
-  margin: 0 auto;
-  width: 550px;
-  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides {
-  width: 550px;
-  height: 550px;
+  height: 100%;
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides .field-item {
   width: 100%;
+  height: 85%;
   text-align: center;
-  line-height: 550px;
+  line-height: 651px;
   vertical-align: middle;
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides .field-item img {
   vertical-align: middle;
-  max-width: 550px;
-  max-height: 550px;
+  max-height: 100%;
   width: auto;
   height: auto;
 }
@@ -984,6 +984,8 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
   text-align: center;
   width: 100%;
   padding: 0;
+  bottom: 0;
+  z-index: 100;
 }
 .node-project .slider .slider_inner .field-name-field-images .rslides_tabs li {
   display: inline-block;
@@ -1003,8 +1005,9 @@ html.js body.is_overlayed #page .field-slideshow-pager a:after {
 }
 .node-project .slider .slider_inner .button_container {
   position: absolute;
-  top: 0;
+  top: 12px;
   left: 50%;
+  z-index: 100;
 }
 .node-project .slider .slider_inner .button_container .close_button {
   border: none;
