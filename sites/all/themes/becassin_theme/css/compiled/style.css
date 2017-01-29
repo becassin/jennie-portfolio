@@ -1151,6 +1151,7 @@ html .page-all-projects #page #header #header-region ul li ul,
 html .node-type-project #page #header #header-region ul li ul,
 html .node-type-page #page #header #header-region ul li ul {
   position: relative;
+  display: block;
 }
 html .page-all-projects #page #header #header-region ul li a,
 html .node-type-project #page #header #header-region ul li a,
